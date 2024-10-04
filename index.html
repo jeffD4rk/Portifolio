@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,167 +13,226 @@
 
 
 <style>
-    .body{
+    * {
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .body {
         text-align: center;
-        height: auto;
+        height: 200vh;
         padding: 0;
         margin: 0;
+        width: 100%;
         background: linear-gradient(180deg, black 50%, rgb(1, 1, 125)100%);
         color: aliceblue;
     }
 
-    .cabecalho{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-self: center;
-        justify-content: center  ;
-        border-bottom: 2px solid grey;
-    }
-    
-    
-    .cabecalho h1{
-        text-align: center;
-        font-size: 60px;
-        font-weight: 900;
-        background-image: url(https://st5.depositphotos.com/1020070/67329/v/380/depositphotos_673295224-stock-illustration-bit-pixel-art-sunset-beach.jpg);
-        background-clip: text;
-        color: transparent;
-        background-position: center;
-        background-size: 100%;
-        background-position-y: -100px;
-        filter: drop-shadow(-2px 2px 2px white);
-        background-position-x: -5px;
-    }
-    .cabecalho img{
-        margin: 2%;
-        text-align: left;
-    }
-    
-    .navegaçao{
-        position: absolute;
-        top: 1%;
-        right: 4%;
-    }
-    .navegaçao ul{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-    .navegaçao ol{
-        text-decoration: none;
-        cursor: pointer;
-        border: 2px solid white;
-        gap: 20px;
-        border-radius: 8px;
-        padding: 5px;
-    }
-    .navegaçao ol:hover{
-        border: 2px solid white;
-        background-color: rgb(53, 53, 49);
-        gap: 20px;
-        border-radius: 8px;
-        padding: 5px;
-    }
-
-    .section_1{
-        margin-top: 3%;
-        display: grid;
-        align-items: top;
-        text-align: left;
-        grid-template-columns: 30% 50%;
-        padding-bottom: 2%;
-        border-bottom: 2px solid grey;
-    }
-    .section_1 img{
-        margin-left: 5%;
-        border-radius: 15px;
-    }
-    .section_2{
-        margin-top: 10%;
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        text-align: left;
-        grid-template-columns: 50% 40%;
-        gap: 4%;
-        line-height: 20px;
-        padding-bottom: 2%;
-    }
-    .section_2 h1{
-        font-size: 8px;
-        margin-left: 5%;
-        border-radius: 15px;
-    }
-    .section_2 b{
-        color: orange;
-    }
-
-    .rodape{
-        height:40vh;
+    .rodape {
+        height: 40vh;
         background-color: transparent;
         background-image: url(sdv_divider.png);
         background-size: 100%;
+        filter: opacity(80%);
+        position: static;
+        bottom: 0%;
+
+        width: 100%;
     }
-    #perfil{
+
+    #perfil {
+        height: 80vh;
+        padding: 2% 0 0 2%;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        align-items: start;
         flex-direction: column;
-        gap: 3%;
-        margin-top: 2%;
-        padding-bottom: 4%;
+        z-index: 1;
+        background-color: black;
+    }
+
+    #bg {
+        opacity: 0.2;
+        width: 100%;
+        background-image: url(code.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 80vh;
+        padding: 2% 0 0 0;
+        position: absolute;
+        top: 0%;
     }
 
 
-    #perfil img{
+    #perfil img {
+        opacity: 1;
+        z-index: 10;
         border-radius: 50%;
         width: 200px;
-        margin: 3% 0;
+        margin: 4% 0 2% 0;
         padding: 5px;
         border: 2px solid rgb(255, 255, 255);
         height: 200px;
     }
-    #perfil h3{
-        width: 80%;
+
+    #perfil h3 {
+        width: 60%;
+        text-align: left;
     }
-    #ft{
+
+    #ft {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin-bottom: 2%;
+        margin-bottom: 0;
     }
-    #prof{
-        margin-bottom: 1%;
+
+    #prof {
+        margin: 3% 0 1% 0;
         font-size: 30px;
     }
 
+    #ft span {
+        border: 2px solid white;
+        border-radius: 6px;
+        padding: 3px;
+    }
+
+    #secaoquecrieisoparacentralizarumtituloPQP {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #pj {
+        margin-bottom: 3%;
+        font-size: 50px;
+    }
+
+    .projetos {
+        gap: 3%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #projetos-card {
+        width: 200px;
+        background-color: rgba(128, 128, 128, 0.231);
+        border: 2px solid white;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #projetos-card:hover {
+        transform: scale();
+    }
+
+
+    #card img{
+        margin-bottom: 5%;
+    }
+
+    #card h4 {
+        font: 10px;
+        margin: 5% 0;
+    }
+
+    #card h1 {
+        font: 900;
+        font-size: 30px;
+        margin-bottom: 5%;
+    }
+
+    #link a{
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        font: 10px;
+        padding: 3% 0;
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+        color: white;
+        background-color: rgb(0, 0, 0);
+    }
 </style>
 
 
 <body class="body">
-    
 
+    <section id="bg">
+
+    </section>
     <section id="perfil">
         <div id="ft">
             <img id="ftperfil" src="https://pa1.aminoapps.com/6253/1d1df5df90064cde7a843aa9d3e66360e3b2f086_00.gif">
             <span>Eduardo de Mello dos Anjos</span>
         </div>
         <h1 id="prof">Desenvolvedor Front-End</h1>
-        <h3>To com muita preguiça de fazer um texto explicativo de verdade entao vou escrever umonte coisa aqui so para este texto ficar bonito e grande comop exemplo para meu potifolio e acho que errei umonte ortografia mais fds!
+        <h3>To com muita preguiça de fazer um texto explicativo de verdade entao vou escrever umonte coisa aqui so para
+            este texto ficar bonito e grande comop exemplo para meu potifolio e acho que errei umonte ortografia mais
+            fds!
         </h3>
     </section>
-    <hr>        
+    <hr>
+
+    <section id="secaoquecrieisoparacentralizarumtituloPQP">
+        <h1 id="pj">Projetos</h1>
+        <section class="projetos">
 
 
 
-    <section class="section_2">
-    
+            <div id="projetos-card">
+                <div id="card">
+                    <h1>Projeto 1</h1>
+                    <img src="t3ddy-stardew-valley-inspiração-foto-2-reddit-não-bane-v0-l70vsdjed0ia1.mp4.gif"
+                        width="150px" alt="">
+                    <hr>
+                    <h4>Projeto realizado para exibição de projetos feitos em robotica</h4>
+                    <hr>
+                    <div id="link">
+                        <a href="">Link</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="projetos-card">
+                <div id="card">
+                    <h1>Projeto 2</h1>
+                    <img src="t3ddy-stardew-valley-inspiração-foto-2-reddit-não-bane-v0-l70vsdjed0ia1.mp4.gif"
+                        width="150px" alt="">
+                    <hr>
+                    <h4>Projeto realizado para exibição de projetos feitos em robotica</h4>
+                    <div id="link">
+                        <a href="">Link</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="projetos-card">
+                <div id="card">
+                    <h1>Projeto 3</h1>
+                    <img src="t3ddy-stardew-valley-inspiração-foto-2-reddit-não-bane-v0-l70vsdjed0ia1.mp4.gif"
+                        width="150px" alt="">
+                    <hr>
+                    <h4>Projeto realizado para exibição de projetos feitos em robotica</h4>
+                    <div id="link">
+                        <a href="">Link</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </section>
     <footer class="rodape">
 
     </footer>
 
 </body>
+
 </html>
