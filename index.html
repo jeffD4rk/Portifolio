@@ -5,273 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<style>
-    * {
-        margin: 0%;
-        padding: 0%;
-    }
-
-    body {
-        text-align: center;
-        scroll-behavior: smooth;
-        scroll-snap-type: y mandatory; 
-        overflow-y: scroll;
-        height: auto;
-        padding: 0;
-        z-index: 1;
-        margin: 0;
-        background-color: black;
-        width: 100%;
-        color: aliceblue;
-    }
-
-    .rodape {
-        filter: brightness(80%);
-        width: 100%;
-    }
-
-    #perfil {
-        height: 97vh;
-        padding: 2% 0 0 2%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        z-index: 1;
-        scroll-snap-align: center; 
-    }
-
-    /* Estilo do vídeo de fundo */
-    #bg-video {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Garante que o vídeo cubra toda a tela */
-        z-index: -1;
-        opacity: 0.2; /* Define a opacidade para que o conteúdo sobre o vídeo seja mais visível */
-    }
-
-    #ftperfil {
-        opacity: 1;
-        z-index: 10;
-        border-radius: 50%;
-        width: 200px;
-        margin: 4% 0 2% 0;
-        padding: 5px;
-        border: 2px solid rgb(255, 255, 255);
-        height: 200px;
-    }
-
-    #icon {
-        width: 40px;
-        margin: 4% 0 2% 0;
-        padding: 5px;
-        height: 40px;
-    }
-
-    #perfil h3 {
-        width: 60%;
-        text-align: left;
-    }
-
-    #ft {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-bottom: 0;
-    }
-
-    #nome {
-        margin: 3% 0 1% 0;
-        font-size: 40px;
-    }
-
-    #prof {
-        margin: 3% 0 1% 0;
-        font-size: 40px;
-    }
-
-    #ft span {
-        border: 2px solid white;
-        border-radius: 6px;
-        padding: 3px;
-    }
-
-    #secaoquecrieisoparacentralizarumtituloPQP {
-        display: flex;
-        scroll-snap-align: center;
-        align-items: center;
-        flex-direction: column;
-        height: 100vh;
-    }
-
-    #pj {
-        margin-bottom: 6%;
-        font-size: 50px;
-    }
-
-    .projetos {
-        scroll-snap-align: center;
-        height: 60vh;
-        border-bottom: 1px solid grey;
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-        align-items: center;
-        width: 90%;
-        z-index: 1;
-        padding-bottom: 2%;
-        
-        margin-bottom: 5% ;
-    }
-    .projetos1 {
-        scroll-snap-align: center;
-        height: 60vh;
-        border-bottom: 1px solid grey;
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-        align-items: center;
-        width: 90%;
-        z-index: 1;
-        padding-bottom: 2%;
-        margin-bottom: 5% ;
-    }
-
-    .projetos img , .projetos1 img  {
-        border-right: 2px solid grey;
-        width: 70%;
-
-        width: 370px;
-        height: 200px;
-        border-radius: 10% 50% / 100% 20% ;
-        border: 2px solid white;
-    }
-
-    #texto {
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        flex-direction: column;
-        width: 90%;
-    }
-
-    #texto h1 {
-        font-size: 40px;
-        margin-bottom: 3%;
-    }
-
-    #projetos-card {
-        margin-left: 4%;
-        width: 200px;
-        background-color: rgba(128, 128, 128, 0.231);
-        border: 2px solid white;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    #projetos-card:hover {
-        transform: scale(1.1);
-    }
-
-    #card img {
-        margin-bottom: 5%;
-        border: 2px solid white;
-        border-radius: 9px;
-    }
-
-    #card h4 {
-        font: 10px;
-        margin: 5% 0;
-    }
-
-    #card h1 {
-        font: 900;
-        font-size: 30px;
-        margin-bottom: 5%;
-    }
-
-    #link a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font: 10px;
-        padding: 3% 0;
-        height: 100%;
-        width: 100%;
-        text-decoration: none;
-        color: white;
-        background-color: rgb(0, 0, 0);
-    }
-    a{
-        text-decoration: none;
-    }
-    
-    #passaro{
-        position: fixed;
-        right: -6%;
-        animation: bird 10s infinite linear;
-    }
-
-    @keyframes bird {
-        from{
-            right: 0%;
-        }
-        to{
-            right: 235%;
-        }
-    }
-
-    @media screen and (max-width:767px){
-        #plataformas{
-        display: flex;
-        flex-direction: column;
-        border: 1px solid grey;
-        border-radius: 8px;
-        margin-top: 4%;
-        background-color: black;
-    }
-    .projetos{
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10%;
-        padding-bottom: 10%;
-    }
-    .projetos1{
-        margin-bottom: 10%;
-        padding-bottom: 10%;
-        flex-direction: column-reverse;
-    }
-    #pj {
-        margin: 6% 0 10% 0;
-        font-size: 50px;
-    }
-    #passaro{
-        position: fixed;
-        right: -6%;
-        animation: bird 5s infinite linear;
-    }
-
-    @keyframes bird {
-        from{
-            right: 0%;
-        }
-        to{
-            right: 235%;
-        }
-    }
-
-    }
-
-</style>
 
 <body>
     <video id="bg-video" autoplay loop muted playsinline>
@@ -281,25 +16,28 @@
 
     <section id="perfil">
         <div id="ft">
-            
+
             <img id="ftperfil" src="https://pa1.aminoapps.com/6253/1d1df5df90064cde7a843aa9d3e66360e3b2f086_00.gif">
             <h1 id="nome">Eduardo de Mello</h1><img id="passaro" src="stardew_bird.gif">
         </div>
         <h1 id="prof">Desenvolvedor Front-End</h1>
         <div id="plataformas">
             <h2>social</h2>
-        <div id="icones">
-            <a target="_blank" href="https://github.com/jeffD4rk"><img id="icon" src="github.png"></a>
-            <a target="_blank" href="https://mail.google.com/mail/u/0/?fs=1&to=eduardo.mello.anjos@escolapr.gov.br&tf=cm"><img id="icon" src="google.png"></a>
-            <a target="_blank" href="https://wa.me/5543988463584"><img id="icon" src="whatsapp.png"></a>
-            <a target="_blank" href="https://www.instagram.com/d4rk_jeff/?next=%2F"><img id="icon" src="instagram.png"></a>
-        </div>
+            <div id="icones">
+                <a target="_blank" href="https://github.com/jeffD4rk"><img id="icon" src="github.png"></a>
+                <a target="_blank"
+                    href="https://mail.google.com/mail/u/0/?fs=1&to=eduardo.mello.anjos@escolapr.gov.br&tf=cm"><img
+                        id="icon" src="google.png"></a>
+                <a target="_blank" href="https://wa.me/5543988463584"><img id="icon" src="whatsapp.png"></a>
+                <a target="_blank" href="https://www.instagram.com/d4rk_jeff/?next=%2F"><img id="icon"
+                        src="instagram.png"></a>
+            </div>
         </div>
     </section>
 
     <hr>
 
-    <section id="secaoquecrieisoparacentralizarumtituloPQP">
+    <div id="secaoquecrieisoparacentralizarumtituloPQP">
         <h1 id="pj">Projetos</h1>
 
         <section class="projetos">
@@ -308,37 +46,43 @@
             </div>
             <div id="texto">
                 <h1>Power Rangers</h1>
-                <h3>Site elaborado para exibição de projetos realizados durante as aulas de robotica, contem apresentaçao da equipe pagina de contato e os projetos com midias e links paar acesso a codigo.</h3>
+                <h3>Site elaborado para exibição de projetos realizados durante as aulas de robotica, contem
+                    apresentaçao da equipe pagina de contato e os projetos com midias e links paar acesso a codigo.</h3>
             </div>
         </section>
 
-        <section class="projetos1">
-            
-            
-            <div id="texto">
-                <h1>Animação</h1>
-                <h3>Site criado para hospedar uma animação criada de modo caseiro com um tema inspirado na netflix, com objetivo de apresentar um projeto de animação junto com as aulas de projeto de vida.</h3>
-            </div>
-            <div>
-                <img src="https://media.tenor.com/IAR8RQwY3UoAAAAM/vomit-gnome.gif" alt="">
-            </div>
-        </section>
-
-        <section class="projetos">
-            <div>
-                <img src="elam.jpg" alt="">
-            </div>
-            <div id="texto">
-                <h1>Power Rangers</h1>
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat cum culpa, eos ipsa omnis inventore,
-                    blanditiis deserunt odit laborum ducimus aliquid, tempora dolor soluta alias nihil. Cumque pariatur
-                    vitae laborum!Lorem</h3>
-            </div>
-        </section>
+        <a href="https://www.xvideos.com"> 
+            <section class="projetos">
 
 
+                <div id="texto">
+                    <h1>Animação</h1>
+                    <h3>Site criado para hospedar uma animação criada de modo caseiro com um tema inspirado na netflix,
+                        com
+                        objetivo de apresentar um projeto de animação junto com as aulas de projeto de vida.</h3>
+                </div>
+                <div>
+                    <img src="https://media.tenor.com/IAR8RQwY3UoAAAAM/vomit-gnome.gif" alt="">
+                </div>
+            </section>
+        </a>
+
+    </div>
+
+
+    <section id="sobre">
+        <h1 id="pj">sobre mim</h1>
+        <div id="coisadotextosobre">
+            <h4>Olá! eu sou o <mark>Eduardo de Mello dos Anjos</mark> tenho <mark>17 anos</mark> e atualmente estou
+                cursando o 2° ano do Ensino Médio.</h4>
+            <h4>Eu sou um programador iniciante na área do <mark>Front-End</mark>, estou atualmente estudando a
+                linguagem
+            </h4>
+            <h4><strong>Java-script</strong>, e futuramente pretendendo estudar a framework <strong>React.</strong></h4>
+            <h4>Pretendo realizar projetos mais grandes futuramente, mas até o momento so conclui projetos escolares.
+            </h4>
+        </div>
     </section>
-
 </body>
 
 </html>
