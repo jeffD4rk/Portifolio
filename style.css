@@ -159,6 +159,10 @@ body {
     font-size: 40px;
     margin-bottom: 3%;
 }
+#texto h3 {
+    font-size: 25px;
+    margin-bottom: 3%;
+}
 
 #projetos-card {
     margin-left: 4%;
@@ -221,6 +225,7 @@ a {
 }
 
 #sobre {
+    width: 100%;
     height: 60vh;
     display: flex;
     padding-top: 1%;
@@ -228,12 +233,12 @@ a {
 }
 
 #sobre h1 {
-    font-size: 40px;
+    font-size: 60px;
     margin-bottom: 1%;
 }
 
 #coisadotextosobre {
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 1%;
 
 }
